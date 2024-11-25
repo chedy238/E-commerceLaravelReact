@@ -156,7 +156,7 @@
         @csrf
         <h3>Login Here</h3>
 
-        <label for="username">Username</label>
+        <label for="username">E-mail</label>
         <input type="email" placeholder="Email or Phone" id="email" name="email" :value="old('email')" required autofocus autocomplete="username">
         <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
