@@ -55,7 +55,7 @@
 
         form {
             height: 520px;
-            width: 400px;
+            width: 600px;
             background-color: rgba(255, 255, 255, 0.13);
             position: absolute;
             transform: translate(-50%, -50%);
@@ -88,6 +88,7 @@
             margin-top: 30px;
             font-size: 16px;
             font-weight: 500;
+            margin-right: 72px;
         }
 
         input {
@@ -154,30 +155,34 @@
     </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
-        <h3>Login Here</h3>x
+        <h3>Register Here</h3>
 
-        <label for="username">Name</label>
-        <input type="name" placeholder="Name" id="name" name="name" :value="old('name')" required
-            autofocus autocomplete="username">
+        <div style="display: flex;align-items: baseline;">
+            <label for="username">Name</label>
+            <input type="name" placeholder="Name" id="name" name="name" :value="old('name')" required
+                autofocus autocomplete="username">
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
 
+        </div>
 
-        <label for="username">Username</label>
-        <input type="email" placeholder="Email or Phone" id="email" name="email" :value="old('email')" required
-            autofocus autocomplete="username">
-        <x-input-error :messages="$errors->get('email')" class="mt-2" />
-
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" required
-            autocomplete="current-password">
-        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-
-
+        <div style="display: flex;align-items: baseline;">
+            <label for="username">Username</label>
+            <input type="email" placeholder="Email or Phone" id="email" name="email" :value="old('email')"
+                required autofocus autocomplete="username">
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+        <div style="display: flex;align-items: baseline;">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" name="password" required
+                autocomplete="current-password">
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
+        <div style="display: flex;align-items: baseline;">
             <label for="password">Confirm Password</label>
-            <input type="password" placeholder="Password" id="password_confirmation" name="password_confirmation" required
-                autocomplete="new-password">
-                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-
+            <input type="password" placeholder="Password" id="password_confirmation" name="password_confirmation"
+                required autocomplete="new-password">
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
         <button submite>Register</button>
     </form>
 </body>

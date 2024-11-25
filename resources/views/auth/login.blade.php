@@ -55,7 +55,7 @@
 
         form {
             height: 520px;
-            width: 400px;
+            width: 600px;
             background-color: rgba(255, 255, 255, 0.13);
             position: absolute;
             transform: translate(-50%, -50%);
