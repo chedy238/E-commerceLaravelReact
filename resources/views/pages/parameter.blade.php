@@ -17,15 +17,16 @@
         </div>
 
         <div class="card-body">
-            @if(isset($parameter->logo))
-            <img src='{{asset('img')}}/{{$parameter->logo}}' width='100'>
+            @if (isset($parameter->logo))
+                <img src='{{ asset('img') }}/{{ $parameter->logo }}' width='100'>
             @endif
             <form action="{{ route('modifier_parameter') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nom</label>
-                    <input type="text" class="form-control" id="nom" name="nom" value='{{ isset($parameter->nom) ? $parameter->nom : '' }}'
-                        aria-describedby="emailHelp" placeholder="Choisir le nom du site ...">
+                    <input type="text" class="form-control" id="nom" name="nom"
+                        value='{{ isset($parameter->nom) ? $parameter->nom : '' }}' aria-describedby="emailHelp"
+                        placeholder="Choisir le nom du site ...">
                 </div>
                 <div class="form-group">
                     <div class="custom-file">
@@ -36,19 +37,19 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="email" name="email"
-                    value='{{ isset($parameter->email) ? $parameter->email : '' }}'
-                        aria-describedby="emailHelp" placeholder="Choisir l'e-mail ...">
+                        value='{{ isset($parameter->email) ? $parameter->email : '' }}' aria-describedby="emailHelp"
+                        placeholder="Choisir l'e-mail ...">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Address</label>
                     <input type="text" class="form-control" id="adresse" name="adresse"
-                    value='{{ isset($parameter->adresse) ? $parameter->adresse : '' }}'
-                        aria-describedby="emailHelp" placeholder="Choisir l'adresse ...">
+                        value='{{ isset($parameter->adresse) ? $parameter->adresse : '' }}' aria-describedby="emailHelp"
+                        placeholder="Choisir l'adresse ...">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Téléphone</label>
                     <input type="number" class="form-control" id="telephone" name="telephone"
-                    value='{{ isset($parameter->telephone) ? $parameter->telephone : '' }}'
+                        value='{{ isset($parameter->telephone) ? $parameter->telephone : '' }}'
                         aria-describedby="emailHelp" placeholder="Choisir le numéro de téléphone ...">
                 </div>
                 <button type="submit">Submit</button>

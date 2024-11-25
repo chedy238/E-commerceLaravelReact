@@ -20,6 +20,12 @@
      </li>
      <hr class="sidebar-divider">
      <li class="nav-item active">
+         <a class="nav-link" href="{{ url('categories') }}">
+             <i class="fas fa-fw fa-tachometer-alt"></i>
+             <span>Catégories</span></a>
+     </li>
+     <hr class="sidebar-divider">
+     <li class="nav-item active">
          <a class="nav-link" href="{{ url('parameter') }}">
              <i class="fas fa-fw fa-tachometer-alt"></i>
              <span>Parameter</span></a>
